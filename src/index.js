@@ -23,7 +23,7 @@ app.post("/item", async (req, res) => {
   return res.sendStatus(201);
 });
 
-//rota para listar todos os usuários
+//rota para listar todos
 app.get("/users", async (req, res) => {
 });
 
