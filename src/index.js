@@ -23,15 +23,15 @@ app.post("/item", async (req, res) => {
   return res.sendStatus(201);
 });
 
-//rota para listar todos
+//rota para listar todos os usuários
 app.get("/users", async (req, res) => {
 });
 
-//rota para buscar um usu
+//rota para buscar um usuário pelo nome
 app.get("/user/:nome", async (req, res) => {
 });
 
-// Inicie o servidor na
+// Inicie o servidor na porta especificada
 app.listen(port, () => {
   console.log(`Servidor Express rodando na porta ${port}`);
 });
