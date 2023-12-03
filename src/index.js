@@ -24,7 +24,7 @@ app.post("/user", async (req, res) => {
   const data = req.body;
   await prisma.user.create({
     data: {
-      name: data.name,
+      nome: data.nome,
     },
   });
   return res.sendStatus(201);
@@ -32,10 +32,10 @@ app.post("/user", async (req, res) => {
 
 //rota para buscar um usuário pelo nome
 app.get("/user/:name", async (req, res) => {
-  const name = req.params.name;
+  const nome = req.params.nome;
   const user = await prisma.user.findMany({
     where: {
-      name: name,
+      nome: nome,
     },
   });
   if (user.length > 0) return res.status(200).send(user);
