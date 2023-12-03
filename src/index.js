@@ -32,7 +32,7 @@ app.post("/user", async (req, res) => {
 
 //rota para buscar um usuário pelo nome
 app.get("/user/:name", async (req, res) => {
-  const nome = req.params.nome;
+  const nome = req.params.name;
   const user = await prisma.user.findMany({
     where: {
       nome: nome,
