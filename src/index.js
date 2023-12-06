@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //rota para criar um item
-//Rotas
 app.get("/users", async (req, res) => {
   const users = await prisma.user.findMany();
   if (users.length > 0) return res.status(200).send(users);
