@@ -23,7 +23,7 @@ app.post("/user", async (req, res) => {
   const data = req.body;
   await prisma.user.create({
     data: {
-      nome: data.nome,
+      name: data.nome,
     },
   });
   return res.sendStatus(201);
@@ -34,7 +34,7 @@ app.get("/user/:name", async (req, res) => {
   const nome = req.params.name;
   const user = await prisma.user.findMany({
     where: {
-      nome: nome,
+      name: nome,
     },
   });
   if (user.length > 0) return res.status(200).send(user);
